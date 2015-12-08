@@ -1,1 +1,1 @@
-![Site Map](../blob/master/week-2/site-map.png)
+![Site Map](../imgs/site-map.png)
