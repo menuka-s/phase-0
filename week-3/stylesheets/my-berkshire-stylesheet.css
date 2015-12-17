@@ -1,0 +1,100 @@
+/*
+3.3 Peer Programming
+my-berkshire-stylesheets.css
+*/
+
+body {
+  background-color: #ffffff;
+  color: navy;
+}
+
+/* This is the CSS for the header */
+ a {
+  color: #800080;
+}
+a:visited {
+  color: red;
+}
+header {
+  text-align: center;
+  border-bottom: 1px solid #9a9a9a;
+}
+h1 {
+  font-weight: bold;
+  margin-bottom: -15px;
+}
+span {
+  font-size: 18px;
+}
+header > p {
+  font-size: 15px;
+}
+header strong {
+  font-size: 17px;
+}
+
+/* CSS for link and table properties */
+table {
+  margin-left: 8%;
+  margin-bottom: 3%;
+}
+td {
+  vertical-align: top;
+}
+table p {
+  font-size: 10px;
+  margin-top: -2px;
+}
+li {
+  color: navy;
+}
+
+/* Geico Image and Text */
+.geico-border{
+  border-bottom: 1px solid #9a9a9a;
+  border-top: 1px solid #9a9a9a;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 10px;
+  padding-bottom: 20px;
+}
+img{
+  margin-bottom: -7px;
+}
+.geico-border p{
+line-height: 1px;
+}
+
+/* Contact and Footer */
+.contact{
+border-bottom: 1px solid #9a9a9a;
+font-size: 12px;
+}
+footer{
+  margin-top: 20px;
+}
+footer p{
+  font-size: 10px;
+}
+
+/*
+Reflections
+
+- What is important to know when linking an external file (like a stylesheet) to an HTML file?
+It is important to know the correct directory of where the external files are located. It may help to create a separate directory to hold files for organizational purposes. It is also important to use the correct syntax when linking to files.
+
+- What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+Sometimes it helped drawing actual borders on the different content (especially the table) to see how the content was aligned or formatted. It wasn't that hard to get the site as we wanted. It was a little time-consuming though. Since aren't experts with CSS yet, there was a lot of trial and error used.
+
+- What CSS did you use to modify the element style (like size, color, etc.)
+We modified font-size, color, alignment, margins, padding, and borders. We also created some classes when we had similar sections in the HTML that needed different styles added to them.
+
+- Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+We did. We had some similar sections that needed different styles added to them, so we used classes. We have a section class for the Geico ad and a section class for the contact section. One sample difference was that the Geico section has two horizontal lines while the contact section has one.
+
+- When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+The actual code base had all the styling done with HTML. I don't think this is as good of an implementation as what we did with a stylesheet. The HTML had to reuse code over and over to accomplish some things that we did with a couple lines of code.
+
+
+
+*/
