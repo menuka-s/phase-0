@@ -52,5 +52,13 @@ If you have an RSpec file you can run it with 'RSpec my_rspec_file.rb', where ,m
 What was confusing about this material? What made sense?
 A lot of this was familiar since we learned some of the basics for our inteview. I got confused with Ruby and IRB in command line; I thought typing 'Ruby' would open the ruby shell. IRB does that.
 
+LINKS
+
+-Address
+https://github.com/menuka-s/phase-0/blob/master/week-4/address/my_solution.rb
+
+-Math
+https://github.com/menuka-s/phase-0/blob/master/week-4/math/my_solution.rb
+
 
 =end
