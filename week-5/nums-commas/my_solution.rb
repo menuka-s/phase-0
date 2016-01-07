@@ -44,9 +44,27 @@ end
 =end
 
 # 2. Refactored Solution
+
+# My refactored solution
 def separate_comma(num)
-	num.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
-end	
+	temp_string = num.to_s.reverse
+	final_string = ""
+	threes_count = 0
+	while threes_count < (temp_string.length )
+		if (threes_count + 1) % 3 == 0 && threes_count != (temp_string.length-1)
+			final_string += temp_string[threes_count] + ","
+		else
+			final_string += temp_string[threes_count]
+		end
+		threes_count += 1
+	end
+	return final_string.reverse
+end
+
+# Online solution
+#def separate_comma(num)
+#	num.to_s.chars.to_a.reverse.each_slice(3).map(&:join).join(",").reverse
+#end	
 
 
 # 3. Reflection
@@ -58,10 +76,11 @@ end
 # Eh....maybe? The pseudocode I have up there was one of my initial ideas, but I couldn't think of a way to implement it with code at first, so I tried other ideas too. When I actually thought of my solution and coded it, it was basically what my pseudocode suggested.  
 
 # What new Ruby method(s) did you use when refactoring your solution? Describe your experience of using the Ruby documentation to implement it/them (any difficulties, etc.). Did it/they significantly change the way your code works? If so, how?
-# Since we were advised not to use regular expressions, I wanted to see what enumerable methods we could use. I want to admit that the refactored solution above was borrowed from an answer online, but it worked really great, and I couldn't think of better solution. The logic of converting the string to an array of the characters in reverse and using .each_slice was really smart.
+# Since we were advised not to use regular expressions, I wanted to see what enumerable methods we could use. I did some googling and found some cool ways to accomplish this challenge. But since my refactored solution has to be similar to my initial solution, I just decided to figure out ways to simplify my code. .reverse helped me get rid of one of my counters.
+# I also inclduded a refactored solution (on line 65) that I found online, because it worked really great. The logic of converting the string to an array of the characters in reverse and using .each_slice was really smart. I wish I thought of a solution like that.
 
 # How did you initially iterate through the data structure?
 # I used a while loop to iterate through my original string in reverse. I used a new string to hold the reverse string plus commas (which I counted using another counter to figure out the postitions.) 
 
 # Do you feel your refactored solution is more readable than your initial solution? Why?
-# The solution that I put uses built in commands that are pretty easy to understand, and looking at the logic and order in which the methods were called make it easier to understand than my initial solution. My solution uses two different counters that could have been simplified by reversing the string and using just one counter to look for the threes positions.
+# I don't really think so. My refactored solution still uses a while loop with some convoluted if statements. Using .reverse and getting rid of one while loop really only saved two lines of code. The online solution that I found is way more readable.
