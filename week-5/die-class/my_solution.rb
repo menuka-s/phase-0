@@ -46,16 +46,16 @@ end
 # 3. Refactored Solution
 
 class Die
-	def initialize(sides)
-		raise ArgumentError.new("Die cannot have less than 1 side") if sides < 1
-		@sides = sides
-	end
+  def initialize(sides)
+    raise ArgumentError.new("Die cannot have less than 1 side") if sides < 1
+    @sides = sides
+  end
 
-	attr_reader :sides 
+  attr_reader :sides 
 
-	def roll
-		rand(1..@sides)
-	end
+  def roll
+    rand(1..@sides)
+  end
 end
 
 
