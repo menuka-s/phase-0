@@ -1,5 +1,14 @@
 #Release 5
 
+# Pseudocode
+
+# Input: N/A
+# Output: Two new class instances with text output
+# Steps: 
+# Create classes
+# Initialize the classes correctly (Initialize a new class instance for NameData within Greetings)
+# Create any other necessary methods
+
 class NameData
   attr_reader :name
 
