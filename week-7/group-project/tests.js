@@ -1,4 +1,22 @@
 // Add the finished solution here when you receive it.
+function sum(array) {
+  return array.reduce((a,b) => a + b);
+};
+
+function mean(array) {
+  return sum(array) / array.length;
+};
+
+function median(array) {
+  var arr = array.sort(function(a, b){return a-b});
+  if (arr.length % 2 === 0) {
+    return mean([arr[arr.length/2], arr[(arr.length/2)-1]])
+  } else {
+    return arr[Math.floor(arr.length/2)]
+  }
+};
+
+
 // __________________________________________
 // Tests:  Do not alter code below this line.
 
