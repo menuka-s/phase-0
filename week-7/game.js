@@ -22,12 +22,14 @@
 
 var game_over = false;
 
+//Object 1
 var king_kong = {
 	name: "King Kong",
 	health: 100,
 	attack_hash: {smash: 20, jump_spin: 30, forward_throw: 15, punch: 5}
 };
 
+//Object 2
 var pilot = {
 	name: "Pilot",
 	health: 100,
@@ -35,6 +37,8 @@ var pilot = {
 	total_health_packs: 5
 };
 
+
+//Function that will choose an attack from the attacker and inflict damage on the enemy
 function attack(attacker, enemy){
 	//Picks a random attack from the attacker to use
 	attack_keys = Object.keys(attacker.attack_hash);
@@ -57,6 +61,7 @@ function attack(attacker, enemy){
 	}
 }
 
+//Function that will heal the pilot
 function heal() {
 	if (pilot.total_health_packs == 0) {
 		//The pilot can't do anything if they don't have health packs
@@ -124,17 +129,59 @@ while (game_over != true) {
 
 // Refactored Code
 
+//I'm just going to change the driver code to have prompts for when this isn't run with node in the console.
+//I need to work more on the error checking for pilot_guess.
 
+
+// var counter = 0
+// while (game_over != true ){
+// 	counter++;
+// 	console.log("\nMove "+ counter + ":");
+
+// 	console.log("Let's see who gets to do an action first.")
+// 	var pilot_guess = prompt("Pick a number between 1 and 100");
+
+// 	// if (typeof pilot_guess != "number" || pilot_guess <= 0 || pilot_guess >= 100) {
+// 	// 	pilot_guess = prompt("Please pick a valid number.");
+// 	// } 
+
+// 	var rand_num = Math.floor(Math.random() * 100) + 1;
+// 	var kong_guess = Math.floor(Math.random() *100) + 1;
+
+// 	if (Math.abs(rand_num - kong_guess) < Math.abs(rand_num - pilot_guess)){
+// 		console.log("King Kong finds an opportunity to attack!");
+// 		attack(king_kong, pilot)
+// 	} else if (Math.abs(rand_num - kong_guess) > Math.abs(rand_num - pilot_guess)){ 
+// 		console.log("The Pilot gets ready to do something...");
+// 		var user_action = prompt("Should the pilot 'attack' or 'heal'?");
+// 		if (user_action = "attack") {
+// 			attack(pilot, king_kong);
+// 		} else if (user_action = "heal") {
+// 			heal();
+// 		} else {
+// 			console.log("Invalid input. Let's just attack.")
+// 			attack(pilot, king_kong);
+// 		}
+// 	} else {
+// 		console.log("Both King Kong and the Pilot make a mistake. Proceed to next move...")
+// 	}
+
+// }
 
 
 
 
 // Reflection
-//
-//
-//
-//
-//
-//
-//
-//
+// What was the most difficult part of this challenge?
+// Probably trying to think of an idea for a game. This challenge was very open-ended so I had lots of options. Once I thought of something it was very easy to code. I also had to work on balancing the two objects so King Kong wouldn't win everytime.
+
+// What did you learn about creating objects and functions that interact with one another?
+// Objects are very useful to store data and can easily be modified when needed. Accessing an element in my attack list was a little complicated so I had to figure out how to do that.
+
+// Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
+// I didn't refactor my code like in previous challenges. I thought my initial solution was pretty readable as it was. 
+// It was interesting trying to figure out how to get a random element in arrays. I thought JS would have a built-in method for this, but it does not. Instead I would basically use Math.random to pick a random number and then use that as an index in my array.
+// Also Math.random itself is pretty interesting. I forgot that it picks a random number between 0 and 1. So I would have to mulitply that my a certain number and then use Math.floor to get a random integer value. 
+
+// How can you access and manipulate properties of objects?
+// We can either access the properties using strings such as object["property"] or we can do object.property and with both we can easily change the associated value if we want to.
