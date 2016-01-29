@@ -1,5 +1,5 @@
-# I worked on this challenge [by myself, with: ].
-# This challenge took me [#] hours.
+# I worked on this challenge [by myself].
+# This challenge took me [1.5] hours.
 
 # Pseudocode
 # Input: number
