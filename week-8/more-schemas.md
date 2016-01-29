@@ -7,6 +7,7 @@ This demonstrates a one-by-one relationship because each officer has one specifi
 
 ##### Release 4:
 ![release4](imgs_8-5/release4.png "Release 4")
+
 I probably should have included a "cost" field in items...
 
 ##### Reflections:
