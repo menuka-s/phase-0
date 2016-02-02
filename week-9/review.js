@@ -34,8 +34,6 @@
 
 // Refactored solution
 function is_fibonacci(number) {
-
-	console.log(number);
 	var num1 = 5 * Math.pow(number, 2) + 4;
 	var num2 = 5 * Math.pow(number, 2) - 4;
 	if (Math.sqrt(num1) == Math.floor(Math.sqrt(num1))){
